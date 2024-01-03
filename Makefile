@@ -1,17 +1,17 @@
 init:
 	yarn install
-	husky install
+	yarn husky install
 
 build:
 	make lint
 	rm -rf ./dist
-	tsc
+	yarn tsc
 
 lint:
-	eslint .
+	yarn eslint .
 
 lint.fix:
-	eslint . --fix
+	yarn eslint . --fix
 
 publish.preview:
 	npm publish --dry-run

@@ -18,7 +18,7 @@ __metadata:
   dependencies:
     "@commitlint/cli": "npm:^18.4.3"
     "@commitlint/config-conventional": "npm:^18.4.3"
-    "@semivan/eslint-config-ts": "npm:^1.0.5"
+    "@semivan/eslint-config-ts": "npm:^1.0.6"
     "@stylistic/eslint-plugin": "npm:^1.5.1"
     "@types/eslint": "npm:^8"
     "@types/node": "npm:^20.10.5"
@@ -349,27 +349,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semivan/eslint-config-ts@npm:^1.0.5":
-  version: 1.0.5
-  resolution: "@semivan/eslint-config-ts@npm:1.0.5"
+"@semivan/eslint-config-ts@npm:^1.0.6":
+  version: 1.0.6
+  resolution: "@semivan/eslint-config-ts@npm:1.0.6"
   dependencies:
-    "@semivan/eslint-config": "npm:^1.0.2"
+    "@semivan/eslint-config": "npm:^1.0.3"
   peerDependencies:
     "@stylistic/eslint-plugin": ^1.5.1
     "@typescript-eslint/eslint-plugin": ^6.15.0
     eslint: ^8.56.0
     typescript: ^5.3.3
-  checksum: 25ed3fd12c71ec59f12d25a3c44dfa11a27586ed5bd45d1536bde7314bffbe65ee4a5393267cf8a3243e75919ff5d3aed318d277ff505f87a25b68bca968afa6
+  checksum: 8e2acb4449593720980678877b7cf1114d1745dbc1d617ef9628ff093382f3374c1d2b38c2adeaef3f155080e321dac6eed99c1589ef81d4b59ba533e84c53b3
   languageName: node
   linkType: hard
 
-"@semivan/eslint-config@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "@semivan/eslint-config@npm:1.0.2"
+"@semivan/eslint-config@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "@semivan/eslint-config@npm:1.0.3"
   peerDependencies:
     "@stylistic/eslint-plugin": ^1.5.1
     eslint: ^8.56.0
-  checksum: cebe10e8a54b3e0660159475b5c56806ff8d5bf1643a52078673009dcf0dedbd2690cdadaf09e09872f321b5e825ce64d5b49623ccf9cf57f86e593639a7c1a1
+  checksum: c47895af0bdf3e8f2ab75588bea4d51530c69510bf384e59d954a0477ca192ccdcdae8ecc46790465c78c7fb793a997494eef8bd03ce0aba820468839caca85e
   languageName: node
   linkType: hard
 
