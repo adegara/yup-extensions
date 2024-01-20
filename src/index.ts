@@ -1,23 +1,31 @@
-import { addMethod, string, MixedSchema } from 'yup';
+import { addMethod, number, string } from 'yup';
 
 declare module 'yup' {
     interface StringSchema {
-        ulid(): StringSchema;
+        ulid: () => StringSchema;
+    }
+
+    interface NumberSchema {
+        emptyStringToUndefined: () => NumberSchema;
     }
 }
 
-function isUlid(value: unknown): value is string {
-    const reg = /^[0-9A-HJKMNP-TV-Z]{26}$/;
-
-    return typeof value === 'string' && reg.test(value);
-}
-
-function ulidValidator(this: MixedSchema) {
+addMethod(string, 'ulid', function() {
     return this.test('ulid', 'Invalid ULID', value => {
         if (!value) return true;
 
-        return isUlid(value);
+        return /^[0-9A-HJKMNP-TV-Z]{26}$/.test(value);
     });
-}
+});
 
-addMethod(string, 'ulid', ulidValidator);
+addMethod(number, 'emptyStringToUndefined', function() {
+    return this.transform((value, originalValue, ctx) => {
+        if (ctx.isType(value)) return value;
+
+        if (typeof originalValue === 'string' && originalValue.trim() === '') {
+            value = undefined;
+        }
+
+        return value;
+    });
+});
