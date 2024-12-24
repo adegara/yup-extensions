@@ -1,6 +1,6 @@
 {
     "name": "@adegara/yup-extensions",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "Extension for yup",
     "repository": "git@github.com:adegara/yup-extensions.git",
     "author": "Ivan Semenikhin <semenihin.ivan@gmail.com>",
