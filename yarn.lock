@@ -21,6 +21,7 @@ __metadata:
     "@types/node": "npm:^22.10.2"
     date-fns: "npm:^4.1.0"
     eslint: "npm:^9.17.0"
+    libphonenumber-js: "npm:^1.12.31"
     typescript: "npm:^5.7.2"
     yup: "npm:^1.6.1"
   peerDependencies:
@@ -887,6 +888,13 @@ __metadata:
     prelude-ls: "npm:^1.2.1"
     type-check: "npm:~0.4.0"
   checksum: 10c0/effb03cad7c89dfa5bd4f6989364bfc79994c2042ec5966cb9b95990e2edee5cd8969ddf42616a0373ac49fac1403437deaf6e9050fbbaa3546093a59b9ac94e
+  languageName: node
+  linkType: hard
+
+"libphonenumber-js@npm:^1.12.31":
+  version: 1.12.31
+  resolution: "libphonenumber-js@npm:1.12.31"
+  checksum: 10c0/6617f7c333ac027cc5969330fd094dbc27028f588f016cbc9c4d363b1d9d8162e5e556a48d66d7bdb7e836b7e29d80e8e2d5bd13fa15df355842c9e149c5515a
   languageName: node
   linkType: hard
 

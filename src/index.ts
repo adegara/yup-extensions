@@ -1,5 +1,6 @@
 import { format, isValid, parseISO } from 'date-fns';
 import { addMethod, number, string, mixed, Schema } from 'yup';
+import parsePhoneNumberFromString from 'libphonenumber-js/min';
 import type {
     AnyObject,
     DefaultThunk,
@@ -137,6 +138,7 @@ class IsoDateTimeSchemaImpl<
 
 declare module 'yup' {
     interface StringSchema {
+        phone: () => StringSchema;
         ulid: () => StringSchema;
     }
 
@@ -156,6 +158,16 @@ export function isoDateTime(): IsoDateTimeSchema {
 
 // Добавляем новый тип схемы в yup.mixed
 addMethod<IsoDateTimeSchema>(mixed as unknown as () => IsoDateTimeSchema, 'isoDateTime', () => isoDateTime());
+
+addMethod(string, 'phone', function() {
+    return this.test('phone', 'Incorrect phone number format', value => {
+        try {
+            return !value || parsePhoneNumberFromString(value)?.isPossible();
+        } catch {
+            return false;
+        }
+    });
+});
 
 addMethod(string, 'ulid', function() {
     return this.test('ulid', 'Invalid ULID', value => {
